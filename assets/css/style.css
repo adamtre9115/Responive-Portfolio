@@ -1,0 +1,288 @@
+/*************** 
+
+Base Syles
+                               
+***************/
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #777777;
+    background-image: url('../images/cork-wallet.png');
+}
+
+h1, h2,
+h3, h4 {
+    font-family: 'Georgia', Times, "Times New Roman", serif;
+}
+
+h2, h3 {
+    color: #4aaaa5;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+ 
+h3 {
+    font-size: 18px;
+}
+
+.content {
+    flex: 1 0 auto;
+  }
+
+.container {
+    /* max-width: 960px; */
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+    display: inline-flex;
+}
+
+.linkBorder {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a {
+    text-decoration: none;
+    color: #777777;
+    font-size: 16px;
+}
+
+ nav li a:hover {
+    border-bottom: solid 1px #4aaaa5;
+}
+
+#name {
+    padding: 15px;
+    /* color: #fff; */
+    background-color: #4aaaa5;
+}
+
+#name a {
+    color: #fff;
+    font-size: 20px;
+}
+
+nav {
+    background-color: #fff;
+    border-bottom: 2px solid #cccccc;
+}
+
+ul {
+    margin: auto;
+}
+
+.align {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*******
+
+about
+
+********/
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+
+.mainContent {
+    /* width: 650px; */
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #dddddd;
+}
+
+.aboutText {
+    line-height: 1.3;
+}
+
+/* .second {
+    margin-top: 10px;
+} */
+.portfolioPic {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.connect {
+    /* width: 270px; */
+    height: 100px;
+    /* margin-left: 12%; */
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #dddddd;
+}
+
+.connectHeading {
+     text-align: center;
+}
+
+.iconDiv {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.iconDiv img {
+    padding: 5px;
+}
+
+/*********
+
+contact
+
+*********/
+
+input, 
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 7px 0 7px 0;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid #4aaaa5;
+}
+
+label {
+    font-size: 18px;
+}
+
+ button {
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    background-color: #4aaaa5;
+    }
+
+/*********
+
+Portfolio
+
+*********/
+
+.portArea {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.portArea li {
+    padding: 5px;
+}
+
+figcaption {
+    position: relative;
+    display: flex;
+    background-color: teal;
+    align-items: center;
+    height: 50px;
+    top: -25%;
+    color: white;
+    opacity: .8;
+}
+
+figcaption:hover {
+    background-color: #fff;
+    color: teal;
+}
+
+.figText {
+    display: inline-block;
+    margin: 0 auto;
+    opacity: 1;;
+}
+
+/******
+
+footer
+
+*******/
+
+footer {
+    text-align: center;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    border-top: 3px solid #49AAA4;
+    background-color: #666666;
+}
+
+/************
+   
+media queries
+
+**************/
+
+
+
+
+
+@media (min-width: 960px) {
+ /* base style */
+ .container {
+    max-width: 960px;
+    margin: 0 auto;
+    }
+
+    #name {
+        padding: 25px;
+    }
+
+    .align {
+        justify-content: space-between;
+    }
+
+    ul {
+        margin: initial;
+    }
+
+    .mainSection {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        
+    }
+
+    .portfolioPic {
+        width: auto;
+        padding-right: 10px;
+        float: left;
+    }
+
+    /* about */
+
+    .mainContent {
+        width: 650px;
+        margin-bottom: initial;
+    }
+
+    .connect {
+        width: 270px;
+        margin-left: 12%;
+    }
+}
+
