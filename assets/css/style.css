@@ -48,14 +48,15 @@ h3 {
 li {
     list-style: none;
     display: inline-flex;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .linkBorder {
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
     padding-left: 5px;
     padding-right: 5px;
 }
+
 a {
     text-decoration: none;
     color: #777777;
@@ -67,6 +68,7 @@ a {
 }
 
 #name {
+
     padding: 15px;
     /* color: #fff; */
     background-color: #4aaaa5;
@@ -82,14 +84,17 @@ nav {
     border-bottom: 2px solid #cccccc;
 }
 
+nav ul {
+    padding: 10px 0;
+}
+
 ul {
     margin: auto;
 }
 
 .align {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: block;
+    text-align: center;
 }
 
 /*******
@@ -100,6 +105,8 @@ about
 .mainSection {
     display: flex;
     flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
     margin-top: 20px;
     
 }
@@ -136,12 +143,12 @@ about
 }
 
 .connectHeading {
-     text-align: center;
+     text-align: left;
 }
 
 .iconDiv {
     margin-top: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .iconDiv img {
@@ -154,11 +161,10 @@ contact
 
 *********/
 
-input, 
-textarea {
-    width: 95%;
+input, textarea {
+    width: 90%;
     padding: 10px;
-    margin: 7px 0 7px 0;
+    margin: 11px 0 11px 0;
 }
 
 input:focus,
@@ -236,33 +242,109 @@ footer {
 media queries
 
 **************/
+@media (min-width: 640px) {
+    /* base style */
 
+    a {
+        font-size: 18px;
+    }
+    
+    .portfolioPic {
+        width: auto;
+        padding-right: 10px;
+        float: left;
+    }
 
+    /* contact */
+    form {
+        margin-left: 30px;
+    }
 
+}
 
+@media (min-width: 768px) {
+    /* base style */
 
-@media (min-width: 960px) {
- /* base style */
- .container {
-    max-width: 960px;
-    margin: 0 auto;
+    .container {
+        max-width: 740px;
+        margin: 0 auto;
+        }
+
+    .align {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mainSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+       
     }
 
     #name {
         padding: 25px;
     }
 
-    .align {
-        justify-content: space-between;
+    ul {
+        padding: initial;
+        margin: initial;
     }
 
-    ul {
-        margin: initial;
+    li {
+        list-style: none;
+        display: inline-flex;
+        padding-left: initial;
+        padding-right: initial;
+    }
+
+    .linkBorder {
+        border-left: 1px solid grey;
+        border-right: 1px solid grey;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    hr {
+        margin: 15px 0px 15px 0px;
+    }
+
+    .aboutText {
+        line-height: 1.5;
+    }
+
+    /* contact */
+
+    input, textarea {
+        width: 90%;
+        padding: 10px;
+        margin: 12px 0 11px 0;
+    }
+}
+
+
+
+
+@media (min-width: 980px) {
+ /* base style */
+
+ a {
+     font-size: 16px;
+ }
+
+ .container {
+    max-width: 960px;
+    margin: 0 auto;
     }
 
     .mainSection {
         display: flex;
         flex-direction: row;
+        width: initial;
+        margin: initial;
         margin-top: 20px;
         
     }
@@ -272,6 +354,14 @@ media queries
         padding-right: 10px;
         float: left;
     }
+
+    .connectHeading {
+        text-align: center;
+   }
+
+   .iconDiv {
+    text-align: center;
+}
 
     /* about */
 
@@ -284,5 +374,15 @@ media queries
         width: 270px;
         margin-left: 12%;
     }
-}
 
+    /* contact */
+    input, 
+    textarea {
+        width: 95%;
+        margin: 7px 0 7px 0;
+    }
+
+    form {
+        margin-left: initial;
+    }
+}
